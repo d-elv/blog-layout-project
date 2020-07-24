@@ -24,13 +24,14 @@ h6 {
 }
 header {
     display: flex;
+    flex-flow: nowrap;
     justify-content: center;
 }
 .leftheader {
     border: 0px solid black;
     padding-right: 1rem;
 }
-h1 {
+.rightheader h1 {
     color: #da008f;
     padding-bottom: 0;
     border: 0px solid black;
@@ -47,12 +48,33 @@ h1 {
     font-size: 0.8rem;
 }
 nav {
-    margin: 0 auto;
-    width: 100%;
     border-top: 2px solid #e96abae7;
     border-bottom: 2px solid #c26660;
 }
 nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+nav li {
+    display: inline-block;
+}
+nav a {
+    text-decoration: none;
+    display: block;
+    color: #73352e;
+    padding: 0.5rem 1rem;
+}
+nav a:hover {
+    text-decoration: none;
+    background-color: black;
+    color: #84de37;
+}
+/* Creating the Nav Bar using inline-block as opposed to flex resulted in needing much less code.
+*/
+
+/* nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -61,17 +83,21 @@ nav ul {
     justify-content: center;
 }
 nav li {
-    padding: 0.5rem;
+    padding: 0;
+    margin: 0.5rem;
     text-align: center;
     flex-basis: 10%;
 }
 nav a {
     color: #a51f10;
     border: 0px solid blue;
-    padding: 0;
-    margin: 0;
     display: block;
 }
+nav a:hover {
+    text-decoration: none;
+    background-color: black;
+    color: #84de37;
+} */
 h2 {
     font-size: 2rem;
     color: #a51f10;
@@ -79,7 +105,7 @@ h2 {
 }
 article {
     display: flex;
-    padding: 2rem 0 2rem 0;
+    padding: 2rem 0 3rem 0;
 }
 .article-right {
     display: flex;
@@ -109,6 +135,8 @@ footer {
     border-top: 2px solid #c26660;
     text-align: center;
     font-size: 0.8rem;
+    margin-bottom: 3.5rem;
+    padding-top: 1rem;
 }
 footer ul {
     display: flex;
